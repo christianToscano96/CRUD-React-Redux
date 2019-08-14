@@ -24,6 +24,16 @@
       "name": "Java",
       "price": "20",
       "id": 5
+    },
+    {
+      "name": "C# aprendiendo",
+      "price": "300",
+      "id": 6
+    },
+    {
+      "name": "Python 2019",
+      "price": "240",
+      "id": 7
     }
   ]
 }

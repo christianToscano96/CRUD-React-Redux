@@ -5,7 +5,7 @@ import { createNewProductAction } from '../actions/productsActions';
 import { validarFormularioAction, validacionExito, validacionError } from '../actions/validacionActions';
 import { useDispatch, useSelector } from 'react-redux';
 
-const NewProduct = () => {
+const NewProduct = ({history}) => {
 
     //state
     const [ name, getName ] = useState('');
@@ -17,6 +17,9 @@ const NewProduct = () => {
     const validarForm = () => dispatch( validarFormularioAction() );
     const exitoValidacion = () => dispatch( validacionExito() );
     const errorValidacion = () => dispatch( validacionError() );
+
+    //obtener los datos del state
+    const error = useSelector((state) => state.error.error);
 
     // addnew product
     const submitNewProduct = e => {
@@ -30,14 +33,16 @@ const NewProduct = () => {
             errorValidacion();
             return;
         }
-        //si todo sale bien
+        //si pasa la validacion//si todo sale bien
         exitoValidacion();
-
-        //si pasa la validacion
+        
+        //crear el nuevo producto
         addProduct({
             name, price
         });
-        //crear el nuevo producto
+
+        //redireccionar
+        history.push('/');
     }
 
     return ( 
@@ -71,7 +76,12 @@ const NewProduct = () => {
                             <button type="submit" className="btn btn-info rounded-pill font-weight-bold text-uppercase d-block w-100">Agregar</button>
 
                         </form>
-        
+                        { error 
+                            ? 
+                            <div className="font-weight-bold alert alert-danger text-center mt-4">
+                                Todos los campos son Obligatorios
+                            </div> 
+                            : null }
                     </div>
                 </div>
             </div>
