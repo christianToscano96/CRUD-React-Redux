@@ -27,8 +27,9 @@ const Products = () => {
             {error 
                 ? 
                 <div className="font-wight-bold alert alert-danger text-center mt-5">Hubo un error...</div>
-                :
-                <React.Fragment>
+                : null }
+               
+                    { loading ? <Spinner/> : null} 
                     <h2 className="text-center my-5">Listado de Productos</h2>
 
                     <table className="table table-striped .table-hover shadow text-center">
@@ -47,11 +48,7 @@ const Products = () => {
                                 />
                             ))}
                         </tbody>
-                    </table>
-                    { loading ? <Spinner/> : null}
-                 </React.Fragment>
-             }
-            
+                    </table>                   
         </React.Fragment>    
     );
 }

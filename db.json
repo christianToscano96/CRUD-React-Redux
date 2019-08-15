@@ -1,14 +1,9 @@
 {
   "books": [
     {
-      "id": 1,
-      "name": "Aprende React v16",
-      "price": 30
-    },
-    {
       "id": 2,
-      "name": "Aprende React y Redux ",
-      "price": 60
+      "name": "Aprende React y Redux 2",
+      "price": "60"
     },
     {
       "name": "Aprendiendo Python",
@@ -16,9 +11,9 @@
       "id": 3
     },
     {
-      "name": "REdux Hooks",
-      "price": "70",
-      "id": 4
+      "id": 4,
+      "name": "Redux Hooks Guia Definitiva v2",
+      "price": "70"
     },
     {
       "name": "Java",
@@ -34,6 +29,11 @@
       "name": "Python 2019",
       "price": "240",
       "id": 7
+    },
+    {
+      "name": "Mongo DB",
+      "price": "150",
+      "id": 8
     }
   ]
 }

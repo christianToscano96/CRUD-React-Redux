@@ -30,7 +30,7 @@ const Product = ({product}) => {
                 'success'
               )
                console.log(id);
-              dispatch(deleteProductAction() );
+              dispatch(deleteProductAction(id) );
             }
           })
     }
@@ -38,7 +38,7 @@ const Product = ({product}) => {
     return ( 
         <tr className="pl-2">
             <td >{product.name}</td>
-            <td><span className="font-weight">$ {product.price}</span></td>
+            <td><span className="font-weight price">$ {product.price}</span></td>
             <td className="acciones ">
                 <Link 
                     to={`/products/edit/${product.id}`}

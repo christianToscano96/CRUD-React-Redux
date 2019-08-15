@@ -30,9 +30,7 @@ h1 a.text-light:hover {
   font-size: 1.4rem;
 }
 
-.navbar .btn {
-  flex:1;
-}
+
 @media (min-width:768px){
     .navbar .btn {
       flex: 0 1 auto;
@@ -48,4 +46,10 @@ h1 a.text-light:hover {
 }
 .acciones > *{
   flex: 1;
+}
+.price {
+  background-color: rgba(137, 43, 226, 0.445);
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(78, 78, 78);
 }
